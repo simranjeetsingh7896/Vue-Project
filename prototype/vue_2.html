@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>v-bind Conditionals</title>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<style>
+			   #thief-health{width: 400px;border: 4px solid rgb(51, 45, 45);}
+			   #thief-health div{height: 25px;background: green;}
+		</style>
+	</head>
+	<body>
+	
+	<div id="app">
+		{{bar}}
+		<div id="thief-health">
+			<div v-bind:style="{ width: health + '%' }"></div>
+		  </div>
+	</div>
+	
+	<script>
+	var app = new Vue({
+		el: '#app',
+		data:{
+			bar:"Health of thief",
+			health: 100
+		}
+	});
+
+	//Documentation
+	//In this i have described the health of thief with v-bind
+
+	</script>
+	
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>v-for Loops</title>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<style>
+			 #thief-health{width: 400px;border: 4px solid rgb(51, 45, 45);}
+             #thief-health div{height: 25px;background: green;}
+		</style>
+	</head>
+	<body>
+	
+	<div id="app">
+		<div id="thief-health">
+			<div v-bind:style="{ width: health + '%' }"></div>
+		  </div>
+		  <div id="controls">
+			<button v-on:click="Catch" v-show="!caught">Catch A Thief</button>
+			<button v-on:click="restart">Play Again</button>
+		  </div>
+	</div>
+	
+	<script>
+	var app = new Vue({
+		el: '#app',
+		
+		data:{
+			health: 100,
+            caught: false
+		},
+		methods: {
+    Catch: function(){
+        this.health -= 20;
+        if ( this.health <= 0 ){
+            this.caught = true;
+        }
+    },
+    restart: function(){
+        this.health = 100;
+        this.caught = false;
+    }
+    },
+		
+	});
+
+
+	//Documentation 
+	// V-onclick event is used to decrease health and restart function 
+
+	</script>
+	
+	</body>
+</html>

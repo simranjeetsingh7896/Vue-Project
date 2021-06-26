@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      html{background-color: rgb(243, 220, 145);}
+      #app{text-align: center; font-size: 50px; font-weight: 700; margin-top: 40px;}
+      #thief{ width: 400px;height: 500px; margin: auto;background: url(thief.gif) center no-repeat;background-size: 120%; margin-top: -40px;}
+      #thief.jail{background-image: url(jailtime.gif);}
+      #thief-health{width: 400px;border: 4px solid rgb(51, 45, 45);margin: 0 auto 30px ; margin-top: -50px;}
+      #thief-health div{height: 25px;background: green;}
+      #controls{width: 100px; margin-left: 670px; display: inline; }
+      button{background: black; color: white; padding: 10px; border: black;}
+    </style>
+  </head>
+  <body>
+    <div id="vue-app">
+      <div id="app" v-show="!caught">Catch Me If You Can !</div>
+      <div id="thief" v-bind:class="{ jail: caught }"></div>
+      <div id="thief-health">
+        <div v-bind:style="{ width: health + '%' }"></div>
+      </div>
+      <div id="controls">
+        <button v-on:click="Catch" v-show="!caught">Catch A Thief</button>
+        <button v-on:click="restart">Play Again</button>
+      </div>
+      <div id="app" v-show="caught">Wow!!! You Caught Him</div>
+    </div>
+  </body>
+  <script>
+    new Vue({
+    el: '#vue-app',
+    data: {
+    health: 100,
+    caught: false
+    },
+    methods: {
+    Catch: function(){
+        this.health -= 20;
+        if ( this.health <= 0 ){
+            this.caught = true;
+        }
+    },
+    restart: function(){
+        this.health = 100;
+        this.caught = false;
+    }
+    },
+    });
+  </script>
+</html>
+

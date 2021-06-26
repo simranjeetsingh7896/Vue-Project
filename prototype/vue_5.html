@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>v-on Event Handlers</title>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+	
+		<div id="app">
+			{{Gameover}}
+			<img v-bind:src="image"  v-bind:title="title"  v-bind:alt="alt" />
+		</div>
+		
+		<script>
+		var app = new Vue({
+			el: '#app',
+			data:{
+				Gameover: "Wow!! You caught him",
+				image : 'img/jailtime.gif',
+				alt : 'Caught a thief',
+				title : 'thief',			
+			}
+		});
+		//Documentation
+		// A image for a game is over and police caught the thief
+		
+		</script>
+	</body>
+</html>

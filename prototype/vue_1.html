@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Intro to v-bind</title>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<style>
+			 img{width: 50%;}	
+		</style>
+	</head>
+	<body>
+	
+	<div id="app">
+		<img v-bind:src="image"  v-bind:title="title"  v-bind:alt="alt" />
+	</div>
+	
+	<script>
+	var app = new Vue({
+		el: '#app',
+		data:{
+			image : 'img/thief.gif',
+			alt : 'Police catching a thief',
+			title : 'thief',			
+		}
+	});
+	//Documentation
+	// A image for a game where police is catching a theif
+	
+	</script>
+	</body>
+</html>
