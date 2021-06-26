@@ -7,5 +7,5 @@
 - [x] vue_05.html - Gameover 
 
 # BoardGame.html
-Game Name : Catch Me If You Can
-How To Play : Click on the "Catch a theif" on every click thief's health will decrease. Once health bar is at zero the thief will be behind bars and You won!!
+- Game Name : Catch Me If You Can
+- How To Play : Click on the "Catch a theif" on every click thief's health will decrease. Once health bar is at zero the thief will be behind bars and You won !!. You can play again by clicking on button
