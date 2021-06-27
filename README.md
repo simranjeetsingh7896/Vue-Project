@@ -9,3 +9,7 @@
 # BoardGame.html
 - Game Name : Catch Me If You Can
 - How To Play : Click on the "Catch a theif" on every click thief's health will decrease. Once health bar is at zero the thief will be behind bars and You won !!. You can play again by clicking on button
+
+#### Resources
+- https://github.com/iamshaunjp/vuejs-playlist
+- https://www.sitepoint.com/premium/books/how-to-build-a-game-with-vue-js/read/1/
